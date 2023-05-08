@@ -1,13 +1,16 @@
 package com.abc.mail;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
 
-@SpringBootTest
+
+@SpringBootApplication
+@EnableAsync
 class MailApplicationTests {
 
 	@Test
-	void contextLoads() {
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(mail.class, args);
+    }
 }

@@ -1,2 +1,4 @@
-package com.abc.mail.Repositories;public interface BookingRepository {
+package com.abc.mail.Repositories;
+
+public interface BookingRepository {
 }

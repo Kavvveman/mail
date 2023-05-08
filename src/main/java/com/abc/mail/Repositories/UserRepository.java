@@ -1,2 +1,6 @@
-package com.abc.mail.Repositories;public interface UserRepository {
+package com.abc.mail.Repositories;
+
+
+
+public interface UserRepository {
 }
