@@ -2,18 +2,20 @@ package com.abc.mail.model;
 
 import jakarta.persistence.*;
 import org.springframework.format.annotation.DateTimeFormat;
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-
 import jakarta.persistence.*;
 import java.util.Set;
 
 
-@Data
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Builder
+@Setter
 @Table(name = "booking")
 public class BookingsModel {
     @Id

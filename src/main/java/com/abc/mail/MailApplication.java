@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //import javax.sql.DataSource;
 
 @SpringBootApplication
-public class MailApplication {
+public class mail {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MailApplication.class, args);
+		SpringApplication.run(mail.class, args);
 	}
 
 }

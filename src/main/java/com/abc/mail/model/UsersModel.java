@@ -7,16 +7,20 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.format.annotation.Data;
 
-
-@Data
+@data
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Builder
+@Setter
 @Table(name = "user")
 public class UsersModel {
 
 
     @Id
-    @Column(name = "UserId", nullable = false)
     @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name = "UserId", nullable = false)
     private int UserID;
 
     @Column(name = "FirstName", nullable = false)
