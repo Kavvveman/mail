@@ -1,66 +1,55 @@
 package com.abc.mail.model;
-
 import jakarta.persistence.*;
-import org.springframework.format.annotation.DateTimeFormat;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import jakarta.persistence.*;
-import java.util.Set;
-
-
+import lombok.*;
+import java.util.Date;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Builder
-@Setter
 @Table(name = "booking")
 public class BookingsModel {
     @Id
     @Column(name = "BookingID", nullable = false)
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private int BookingID;
+    private int bookingID;
 
     @Column(name = "UserID")
-    private int UserID;
+    private int bserID;
 
     @Column(name = "startDate")
-    private DateTimeFormat startDate;
+    private Date startDate;
 
-    @Column(name = "#endDate")
-     private DateTimeFormat endDate;
+    @Column(name = "endDate")
+     private Date endDate;
 
-     @Column(name = "UserID")
-     private DateTimeFormat CreatedOn;
+     @Column(name = "CreatedOn")
+     private Date createdOn;
 
      @Column(name = "CostOfBooking")
-     private int CostOfBooking;
+     private int costOfBooking;
 
      @Column(name = "IsActiveBooking")
-    private boolean IsActiveBooking;
+    private boolean isActiveBooking;
 
 
 
-       public DateTimeFormat getCreatedOn() {
-       return CreatedOn;
+       public Date getCreatedOn() {
+       return createdOn;
    }        
 
-      public void setStartDate(DateTimeFormat startDate) {
+      public void setStartDate(Date startDate) {
        this.startDate = startDate;
    }
 
-   public DateTimeFormat getEndDate() {
+   public Date getEndDate() {
        return endDate;
    }
 
       public int getCostOfBooking() {
-       return CostOfBooking;
+       return costOfBooking;
    }
 
    public void setCostOfBooking(int costOfBooking) {
-       CostOfBooking = costOfBooking;
+       costOfBooking = costOfBooking;
    }
 
 

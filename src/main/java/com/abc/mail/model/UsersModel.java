@@ -1,33 +1,26 @@
 package com.abc.mail.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.format.annotation.Data;
+import lombok.*;
 
-@data
+
 @Entity
+@Table(name = "user")
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Builder
-@Setter
-@Table(name = "user")
 public class UsersModel {
 
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "UserId", nullable = false)
-    private int UserID;
+    private int ID;
 
     @Column(name = "FirstName", nullable = false)
-    private string Firstname;
+    private String Firstname;
 
     @Column(name = "Surname",  unique = true)
-    private string Surname;
+    private String Surname;
 
     @Column(name = "Email", nullable = false)
     private String Email;
@@ -36,7 +29,7 @@ public class UsersModel {
     private int CellNumber;
 
     @Column(name = "IdNumber", nullable = false, unique = true)
-    private Int IdNumber;
+    private int IdNumber;
 
     @Column(name = "Password",nullable = false)
     private String Password;

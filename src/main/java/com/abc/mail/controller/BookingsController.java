@@ -2,10 +2,7 @@ package com.abc.mail.controller;
 
 import com.abc.mail.service.BookingServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 // This means that this class is a Controller
@@ -13,20 +10,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/v1")
 public class BookingsController {
-    @Autowired
+    // @Autowired
     // BookingServiceInterface bookingServiceInterface;
 
 
-    @PostMapping("/Test")
-    public @ResponseBody String test () {
+    @GetMapping("/test")
+    public @ResponseBody String test ()  {
     return  "is working";
     }
-    @PostMapping("/Test1")
+    @PostMapping("/test1")
     public String test1 () {
     return  "is working1";
     }
-    @GetMapping("/TestGet")
-    public String TestGEt(){
+    @GetMapping("/testget")
+    public String testGet(){
         return"Results";
     }
 
@@ -36,8 +33,6 @@ public class BookingsController {
 
 
         return "Find all";
-
-
     }
 
 

@@ -17,17 +17,16 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/v1")
 public class UserController {
     
-    @Autowired
-    UserDetailService userDetailService;
-    @Autowired
-    private UserRepository userRepository;
+
+//    @Autowired
+//    private UserRepository userRepository;
 
 
-    @PostMapping("/auth/register")
-    public ResponseEntity<String> registerUser(@RequestBody User user) {
-        userDetailService.saveUser(user);
-        return ResponseEntity.ok("Dpme");
-    }
+//    @PostMapping("/auth/register")
+//    public ResponseEntity<String> registerUser(@RequestBody User user) {
+//        userDetailService.saveUser(user);
+//        return ResponseEntity.ok("Dpme");
+//    }
 
     
 
