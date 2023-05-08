@@ -1,5 +1,2 @@
-package com.abc.mail.controller;
-
-public class UserController {
-
+package com.abc.mail.controller;public class UserController {
 }
